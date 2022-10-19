@@ -64,6 +64,7 @@
    64  unset CLASSPATH
    65  java Program 1200000 finance.PersonalLoan common
    66  ls lib/finance/
+   67  jar -c -f finlib.jar -C lib *
    68  jar -c -f finlib.jar -C lib .
    69  ls
    70  jar -t -f finlib.jar 
