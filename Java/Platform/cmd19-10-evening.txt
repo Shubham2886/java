@@ -21,8 +21,16 @@
    21  vi Computation.h
    22  javap -p -s Computation
    23  vi computationsup.cpp
+   24  c++ -shared -fPIC computationsup.cpp series.o -o libcomputation.so
+   25  vi Program.java 
+   26  javac Program.java 
+   27  java Program compute 2 5 10
+   28  java -Djava.library.path=. Program compute 2 5 10
+   29  ls
+   30  rm libcomputation.so 
    31  c++ -shared -fPIC computationsup.cpp series.o -o libcomputationsup.so
    32  java -Djava.library.path=. Program compute 2 5 10
+   33  vi compute.sh
    34  vi program.sh
    35  bash program.sh gcd 24 36
    36  chmod a+x program.sh 
